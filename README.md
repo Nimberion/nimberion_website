@@ -1,2 +1,2 @@
 # nimberion_website
-This will be Nimberions A website.
+This will someday become Nimberions website.
