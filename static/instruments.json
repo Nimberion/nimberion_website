@@ -1,0 +1,74 @@
+[
+	{
+		"id": 1,
+		"name": "ULK-121",
+		"instrumentType": "Concert Ukulele",
+		"manufacturer": "Keine Ahnung"
+	},
+	{
+		"id": 2,
+		"name": "ULK-122",
+		"instrumentType": "Tenor Ukulele",
+		"manufacturer": "Keine Ahnung"
+	},
+	{
+		"id": 3,
+		"name": "ULK-123",
+		"instrumentType": "Gitarre",
+		"manufacturer": "Keine Ahnung"
+	},
+	{
+		"id": 4,
+		"name": "ULK-122",
+		"instrumentType": "Tenor Ukulele",
+		"manufacturer": "Keine Ahnung"
+	},
+	{
+		"id": 5,
+		"name": "ULK-122",
+		"instrumentType": "Tenor Ukulele",
+		"manufacturer": "Keine Ahnung"
+	},
+	{
+		"id": 6,
+		"name": "ULK-122",
+		"instrumentType": "Tenor Ukulele",
+		"manufacturer": "Keine Ahnung"
+	},
+	{
+		"id": 7,
+		"name": "ULK-122",
+		"instrumentType": "Tenor Ukulele",
+		"manufacturer": "Keine Ahnung"
+	},
+	{
+		"id": 8,
+		"name": "ULK-122",
+		"instrumentType": "Tenor Ukulele",
+		"manufacturer": "Keine Ahnung"
+	},
+	{
+		"id": 9,
+		"name": "ULK-122",
+		"instrumentType": "Tenor Ukulele",
+		"manufacturer": "Keine Ahnung"
+	},
+	{
+		"id": 10,
+		"name": "ULK-122",
+		"instrumentType": "Tenor Ukulele",
+		"manufacturer": "Keine Ahnung"
+	},
+	{
+		"id": 11,
+		"name": "ULK-122",
+		"instrumentType": "Tenor Ukulele",
+		"manufacturer": "Keine Ahnung"
+	},
+	{
+		"id": 12,
+		"name": "ULK-122",
+		"instrumentType": "Tenor Ukulele",
+		"manufacturer": "Keine Ahnung"
+	}
+]
