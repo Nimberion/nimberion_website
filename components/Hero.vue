@@ -2,15 +2,15 @@
 	<section class="flex px-px md:px-0.5">
 		<div v-for="(instrument, index) in displayedInstruments" :key="index" class="w-1/6 md:w-[12.5%] lg:w-[10%] xl:w-1/12 m-px md:m-0.5 p-[1%] bg-gradient overflow-hidden" :style="`background-color: #${backgroundColors[index]}`">
 			<div class="aspect-w-9 aspect-h-16 max-h-96 relative">
-				<button :ref="index" class="md:hidden absolute h-6 w-6 mt-auto ml-auto -bottom-px -right-px bg-black bg-opacity-50 text-white rounded-full z-20 focus:outline-none flex" @click="toggleInstrumentColor(index)">
+				<button
+					:ref="index"
+					class="md:hidden absolute h-6 w-6 mt-auto ml-auto -bottom-px -right-px bg-black bg-opacity-50 text-white rounded-full z-20 focus:outline-none flex"
+					@focus="addInstrumentColor(index)"
+					@blur="removeInstrumentColor(index)"
+				>
 					<i class="fas fa-mouse-pointer text-sm m-auto" />
 				</button>
-				<img
-					src="@/assets/images/instruments/test.svg"
-					alt="Ukulele"
-					class="max-h-full max-w-full w-auto m-auto filter-white z-10"
-					:class="({ 'no-filter': index === activeInstrument }, { 'no-filter': index === activeInstrument })"
-				/>
+				<img src="@/assets/images/instruments/test.svg" alt="Ukulele" class="max-h-full max-w-full w-auto m-auto filter-white z-10" :class="{ 'no-filter': index === activeInstrument }" />
 			</div>
 		</div>
 	</section>
@@ -79,11 +79,13 @@
 			array.sort(() => Math.random() - 0.5);
 		}
 
-		toggleInstrumentColor(index: number) {
+		addInstrumentColor(index: number) {
+			this.activeInstrument = index;
+		}
+
+		removeInstrumentColor(index: number) {
 			if (this.activeInstrument === index) {
 				this.activeInstrument = 99;
-			} else {
-				this.activeInstrument = index;
 			}
 		}
 	}
@@ -105,18 +107,8 @@
 		filter: none;
 		filter: drop-shadow(0rem 1rem 0.5rem rgba(0, 0, 0, 0.6));
 	}
+
 	.test {
 		position: absolute;
-		width: 30px;
-		height: 30px;
-
-		background-color: black;
-		color: white;
-		border-radius: 50px;
-
-		margin-top: auto;
-		margin-left: auto;
-		bottom: 0;
-		right: 0;
 	}
 </style>
