@@ -1,22 +1,22 @@
 <template>
-	<nav class="grid center-nav-logo px-1">
+	<nav class="grid grid-cols-[1fr,auto,1fr] px-1">
 		<div class="flex items-center justify-self-end">
-			<a class="hidden md:flex hover:text-red-700">
+			<Nav-Item>
 				AKKORDE
 				<span class="fas fa-chevron-down text-xs ml-1 self-center" />
-			</a>
-			<a class="hidden md:flex hover:text-red-700 ml-4 lg:ml-8">INSTRUMENTE</a>
+			</Nav-Item>
+			<Nav-Item>INSTRUMENTE</Nav-Item>
 		</div>
-		<a><Logo class="flex items-center m-2 mx-8 lg:mx-16 h-10" /></a>
+		<a><Logo class="flex items-center m-2 mx-4 lg:mx-8 h-10" /></a>
 		<div class="flex items-center justify-self-start">
-			<a class="hidden md:flex hover:text-red-700 mr-4 lg:mr-8">
+			<Nav-Item>
 				TOOLS
 				<span class="fas fa-chevron-down text-xs ml-1 self-center" />
-			</a>
-			<a class="hidden md:flex hover:text-red-700">
+			</Nav-Item>
+			<Nav-Item>
 				SPIELE
 				<span class="fas fa-chevron-down text-xs ml-1 self-center" />
-			</a>
+			</Nav-Item>
 		</div>
 	</nav>
 </template>
@@ -29,9 +29,3 @@
 	})
 	export default class Nav extends Vue {}
 </script>
-
-<style scoped>
-	.center-nav-logo {
-		grid-template-columns: 1fr auto 1fr;
-	}
-</style>
