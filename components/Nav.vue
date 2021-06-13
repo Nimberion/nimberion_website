@@ -7,7 +7,7 @@
 			</Nav-Item>
 			<Nav-Item>INSTRUMENTE</Nav-Item>
 		</div>
-		<a><Logo class="flex items-center m-2 mx-4 lg:mx-8 h-10" /></a>
+		<NuxtLink to="/"><Logo class="flex items-center m-2 mx-4 lg:mx-8 h-10" /></NuxtLink>
 		<div class="flex items-center justify-self-start">
 			<Nav-Item>
 				TOOLS

@@ -1,7 +1,7 @@
 <template>
-	<a class="hidden md:flex hover:text-red-700 mx-4 lg:ml-8">
+	<NuxtLink to="/games" class="hidden md:flex hover:text-red-700 mx-4 lg:ml-8">
 		<slot />
-	</a>
+	</NuxtLink>
 </template>
 
 <script lang="ts">
