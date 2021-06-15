@@ -1,7 +1,7 @@
 <template>
-	<NuxtLink :to="`/${$attrs.route}`" class="hidden md:flex hover:text-red-700 mx-4 lg:ml-8">
+	<NuxtLink :to="`/${$attrs['nav-item'].route}`" class="hidden md:flex hover:text-red-700 mx-4 lg:ml-8">
 		<slot />
-		<span v-if="$attrs['has-dropdown'] === true" class="fas fa-chevron-down text-xs ml-1 self-center" />
+		<span v-if="$attrs['nav-item'].subMenu" class="fas fa-chevron-down text-xs ml-1 self-center" />
 	</NuxtLink>
 </template>
 
