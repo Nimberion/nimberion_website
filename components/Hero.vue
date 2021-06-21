@@ -3,8 +3,8 @@
 		<div
 			v-for="(instrument, index) in displayedInstruments"
 			:key="index"
-			class="w-1/6 md:w-[12.5%] lg:w-[10%] xl:w-1/12 m-px md:m-0.5 p-[1%] bg-gradient overflow-hidden bg-teal-4"
-			:style="`background-color: #${backgroundColors[index]}`"
+			class="w-1/6 md:w-[12.5%] lg:w-[10%] xl:w-1/12 m-px md:m-0.5 p-[1%] overflow-hidden bg-teal-4"
+			:style="`background: linear-gradient(10deg, #${backgroundColors[index]}, #${backgroundColors[index]})`"
 		>
 			<div class="aspect-w-9 aspect-h-16 max-h-96 relative">
 				<button class="md:hidden absolute h-6 w-6 mb-auto ml-auto -top-px -right-px bg-black bg-opacity-50 text-white rounded-full z-20 focus:outline-none flex" @click="toggleInstrumentColor(index)">
@@ -28,12 +28,15 @@
 		instruments: Array<Instrument> = instruments;
 		randomInstrumentSelection: Array<Instrument> = [];
 		displayedInstruments: Array<Instrument> = [];
-		backgroundColors: Array<string> = ["ff6842", "ffb442", "ffff42", "b4ff42", "68ff42", "42ff68", "42ffb4", "42ffff", "42b4ff", "4268ff", "6842ff", "b442ff", "ff42ff", "ff42b4", "ff4268"];
 		activeInstrumentIndex: number = -1;
+
+		get backgroundColors(): Array<string> {
+			return this.$store.state.colors;
+		}
 
 		mounted() {
 			this.shuffleArray(this.randomInstrumentSelection);
-			this.shuffleArray(this.backgroundColors);
+			this.$store.commit("shuffleColors");
 
 			this.randomInstrumentSelection = this.instruments.slice(0, 12);
 			this.setNumberOfInstruments();
@@ -92,10 +95,6 @@
 </script>
 
 <style scoped>
-	.bg-gradient {
-		background: linear-gradient(-10deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%);
-	}
-
 	.filter-white {
 		filter: brightness(0) invert(1);
 	}
